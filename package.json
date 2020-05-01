@@ -8,7 +8,9 @@
     "precommit": "lint-staged",
     "test": "cross-env MORO_TEST_MODE='true' ava && bats tests/end-to-end/moro.tests.bats",
     "contributor:add": "all-contributors add",
-    "contributor:generate": "all-contributors generate"
+    "contributor:generate": "all-contributors generate",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=4"
@@ -53,7 +55,8 @@
     "please-upgrade-node": "1.0.1",
     "prettier-standard": "6.0.0",
     "sqlite3": "^3.1.8",
-    "update-notifier": "2.2.0"
+    "update-notifier": "2.2.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.3.0",
@@ -71,5 +74,6 @@
       "prettier-standard",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }
